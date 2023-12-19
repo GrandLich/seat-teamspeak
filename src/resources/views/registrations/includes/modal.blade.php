@@ -38,7 +38,7 @@
       </div>
       <div class="modal-footer">
         <button class="btn btn-outline-secondary pull-left" type="button" data-dismiss="modal">Close</button>
-        <a href="{{ sprintf('ts3server://%s:%d?nickname=%s&token=%s', $settings->server_host, $settings->server_port, auth()->user()->name, $registration_token) }}" class="btn btn-primary">
+        <a href="{{ sprintf('ts3server://%s:%d?nickname=%s&token=%s', $settings->server_host, $settings->server_port, $identities[0]->buildConnectorNickname(), $registration_token) }}" class="btn btn-primary">
           <i class="fas fa-sign-in-alt"></i> Join
         </a>
         <button class="btn btn-success" type="submit" form="ts-registration-form">
